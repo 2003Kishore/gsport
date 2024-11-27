@@ -102,7 +102,7 @@
 					</tr>
 										<tr>
 						<th>Booking date</th>
-						<td>
+						<td id = "asker">
 							01-Sep-2024						</td>
 					</tr>
 					<tr>
@@ -118,7 +118,7 @@
 					</tr>
 					<tr>
 						<th>Reference number</th>
-						<td>
+						<td id = "refno">
 							20240831984763						</td>
 					</tr>
 					<tr>
@@ -171,7 +171,19 @@
 			white-space: nowrap;
 		}
 	</style>
+	<script>
+		n =  new Date();
+		y = n.getFullYear();
+		m = n.getMonth();
+		d = n.getDate();
+		d = d<10 ? "0" + d : d;
+		var mon = ["Jan", "Feb","Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov","Dec"];
+		document.getElementById("asker").innerHTML = d + "-" + mon[m] + "-" + y;
 
+		x = n.getMonth() + 1;
+		x = x<10 ? "0" + x : x;
+		document.getElementById("refno").innerHTML = ""+y+""+x+"0"+"4370203";
+	</script>
 	
 
 </body></html>
